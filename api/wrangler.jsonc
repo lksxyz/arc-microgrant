@@ -8,7 +8,7 @@
   "vars": {
     "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
     "RPC_URL": "http://127.0.0.1:8545",
-    "ESCROW_ADDRESS": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "ESCROW_ADDRESS": "0xB03359a5100B1403FaBA7FAcF68b15BCa791de20",
     "ALLOWED_ORIGINS": "http://localhost:5173,http://127.0.0.1:5173"
   },
   "kv_namespaces": [
@@ -20,7 +20,7 @@
       "vars": {
         "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
         "RPC_URL": "https://rpc.mainnet.arc.io",
-        "ESCROW_ADDRESS": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "ESCROW_ADDRESS": "0xB03359a5100B1403FaBA7FAcF68b15BCa791de20",
         "ALLOWED_ORIGINS": "https://platform.lukis.workers.dev"
       },
       "kv_namespaces": [
