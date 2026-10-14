@@ -32,9 +32,6 @@ function Landing() {
           <Button size="lg" className="h-12 px-6 text-base" render={<Link to="/login" />}>
             Get started
           </Button>
-          <Button size="lg" variant="outline" className="h-12 px-6 text-base" render={<Link to="/login" />}>
-            Log in
-          </Button>
           <Button size="lg" variant="secondary" className="h-12 px-6 text-base" render={<Link to="/my-bookings" />}>
             View my bookings
           </Button>
