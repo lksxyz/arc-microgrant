@@ -19,9 +19,9 @@
       "name": "api",
       "vars": {
         "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
-        "RPC_URL": "",
-        "ESCROW_ADDRESS": "",
-        "ALLOWED_ORIGINS": "https://platform.<your-subdomain>.workers.dev"
+        "RPC_URL": "https://rpc.mainnet.arc.io",
+        "ESCROW_ADDRESS": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "ALLOWED_ORIGINS": "https://platform.lukis.workers.dev"
       },
       "kv_namespaces": [
         { "binding": "DATA", "id": "a75d688d646e480299ee1808c848b9aa" }
