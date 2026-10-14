@@ -44,7 +44,7 @@ function Setting() {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Business profile</CardTitle>
-          <CardDescription>Shown to customers on WhatsApp.</CardDescription>
+          <CardDescription>Shown to customers on your booking page.</CardDescription>
         </CardHeader>
         <CardContent>
           {q.isPending ? (

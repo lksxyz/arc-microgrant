@@ -10,7 +10,7 @@ const steps = [
   { title: 'Sign up with email, Google, or wallet', body: 'Log in once and your account is ready to use.' },
   { title: 'Fill in your business profile', body: 'Your business name, tagline, and short description.' },
   { title: 'Create a service', body: 'Set the duration, price, schedule, and USDC deposit amount.' },
-  { title: 'Share on WhatsApp', body: 'Customers book through the WhatsApp flow and must pay a deposit on Arc.' },
+  { title: 'Share your booking link', body: 'Customers book through your link and must pay a deposit on Arc.' },
 ]
 
 function Landing() {
@@ -22,18 +22,21 @@ function Landing() {
           <p className="text-4xl font-medium text-black">Intensio</p>
         </div>
         <h1 className="text-4xl font-semibold leading-tight tracking-tight">
-          Booking via WhatsApp, deposits in USDC on Arc.
+          Bookings with USDC deposits on Arc.
         </h1>
         <p className="text-base text-muted-foreground">
-          A booking system for businesses with schedules. Customers book through the WhatsApp flow and
-          must deposit USDC before the slot is locked.
+          A booking system for businesses with schedules. Customers must deposit USDC before the slot
+          is locked.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button size="lg" render={<Link to="/login" />}>
+          <Button size="lg" className="h-12 px-6 text-base" render={<Link to="/login" />}>
             Get started
           </Button>
-          <Button size="lg" variant="outline" render={<Link to="/login" />}>
+          <Button size="lg" variant="outline" className="h-12 px-6 text-base" render={<Link to="/login" />}>
             Log in
+          </Button>
+          <Button size="lg" variant="secondary" className="h-12 px-6 text-base" render={<Link to="/my-bookings" />}>
+            View my bookings
           </Button>
         </div>
       </section>
