@@ -24,7 +24,7 @@
         "ALLOWED_ORIGINS": "https://platform.<your-subdomain>.workers.dev"
       },
       "kv_namespaces": [
-        { "binding": "DATA", "id": "" }
+        { "binding": "DATA", "id": "a75d688d646e480299ee1808c848b9aa" }
       ]
     }
   }
