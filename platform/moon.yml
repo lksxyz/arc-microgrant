@@ -1,0 +1,30 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+language: 'typescript'
+tags: ['frontend']
+
+fileGroups:
+  sources:
+    - 'src/**/*'
+    - 'index.html'
+    - 'public/**/*'
+  configs:
+    - '*.{json,jsonc,ts,js}'
+
+tasks:
+  dev:
+    command: 'pnpm'
+    args: ['run', 'dev']
+    preset: 'server'
+  build:
+    command: 'pnpm'
+    args: ['run', 'build']
+    inputs: ['@group(sources)', '@group(configs)']
+    outputs: ['dist']
+  typecheck:
+    command: 'pnpm'
+    args: ['run', 'typecheck']
+    inputs: ['@group(sources)', '@group(configs)']
+  deploy:
+    command: 'pnpm'
+    args: ['run', 'deploy']
+    deps: ['build']

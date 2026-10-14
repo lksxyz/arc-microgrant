@@ -1,0 +1,31 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "api",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "vars": {
+    "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
+    "RPC_URL": "http://127.0.0.1:8545",
+    "ESCROW_ADDRESS": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "ALLOWED_ORIGINS": "http://localhost:5173,http://127.0.0.1:5173"
+  },
+  "kv_namespaces": [
+    { "binding": "DATA", "id": "a2d1f05aa17541dfb7e15427b996dcf7" }
+  ],
+  "env": {
+    "production": {
+      "name": "api",
+      "vars": {
+        "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
+        "RPC_URL": "",
+        "ESCROW_ADDRESS": "",
+        "ALLOWED_ORIGINS": "https://platform.<your-subdomain>.workers.dev"
+      },
+      "kv_namespaces": [
+        { "binding": "DATA", "id": "" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy --env production"
+  },
+  "dependencies": {
+    "@effect/platform-node": "^4.0.4",
+    "effect": "^4.0.4",
+    "jose": "^6.2.12",
+    "viem": "2.36.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  }
+}

@@ -1,0 +1,8 @@
+$schema: 'https://moonrepo.dev/schemas/tasks.json'
+
+fileGroups:
+  sources:
+    - 'src/**/*'
+    - 'index.ts'
+  configs:
+    - '*.{json,js,ts,mjs,cjs}'
