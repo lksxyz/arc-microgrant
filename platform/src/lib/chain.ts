@@ -28,6 +28,16 @@ export const escrowAbi = parseAbi([
   'function objectNoShow(uint256 id)',
   'function refundAfterMerchantCancel(uint256 id)',
   'function reschedule(uint256 id, uint40 newScheduledAt)',
+  'error NotBooking()',
+  'error InvalidStatus()',
+  'error Unauthorized()',
+  'error InvalidAmount()',
+  'error InvalidTime()',
+  'error WindowOpen()',
+  'error WindowClosed()',
+  'error RescheduleUsed()',
+  'error ClaimLocked()',
+  'error TransferFailed()',
 ])
 
 export const erc20Abi = parseAbi([
