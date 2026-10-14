@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-: "${PRIVATE_KEY:?set PRIVATE_KEY (deployer, punya USDC di Arc untuk gas)}"
+: "${PRIVATE_KEY:?set PRIVATE_KEY (deployer wallet with USDC on Arc for gas)}"
 : "${ARBITER:?set ARBITER (alamat arbiter escrow)}"
 
 RPC_URL="${ARC_RPC:-https://rpc.mainnet.arc.io}"
@@ -12,20 +12,20 @@ FORGE="${FORGE:-arc-forge}"
 CAST="${CAST:-arc-cast}"
 
 if [[ "$ARBITER" == "0x0000000000000000000000000000000000000000" ]]; then
-  echo "ARBITER tidak boleh address(0)" >&2
+  echo "ARBITER must not be address(0)" >&2
   exit 1
 fi
 
 CHAIN_ID="$("$CAST" chain-id --rpc-url "$RPC_URL")"
 if [[ "$CHAIN_ID" != "$EXPECTED_CHAIN_ID" ]]; then
-  echo "Chain ID $CHAIN_ID, expected $EXPECTED_CHAIN_ID (Arc mainnet). Batal." >&2
+  echo "Chain ID $CHAIN_ID, expected $EXPECTED_CHAIN_ID (Arc mainnet). Aborting." >&2
   exit 1
 fi
 
 DEPLOYER="$("$CAST" wallet address --private-key "$PRIVATE_KEY")"
 BALANCE_WEI="$("$CAST" balance "$DEPLOYER" --rpc-url "$RPC_URL")"
 echo "Deployer : $DEPLOYER"
-echo "Saldo    : $BALANCE_WEI (native USDC, 18 desimal)"
+echo "Balance  : $BALANCE_WEI (native USDC, 18 decimals)"
 echo "USDC     : $USDC_ADDRESS"
 echo "Arbiter  : $ARBITER"
 
@@ -39,5 +39,5 @@ export USDC_ADDRESS ARBITER PRIVATE_KEY
   -vvvv
 
 echo
-echo "Selesai. Cek alamat BookingEscrow di log di atas dan di https://explorer.arc.io"
-echo "Lalu isi ESCROW_ADDRESS di api/wrangler.jsonc dan VITE_ESCROW_ADDRESS di platform/.env.production."
+echo "Done. Find the BookingEscrow address in the log above or at https://explorer.arc.io"
+echo "Then set ESCROW_ADDRESS in api/wrangler.jsonc and VITE_ESCROW_ADDRESS in platform/.env.production."
