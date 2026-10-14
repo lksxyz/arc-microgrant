@@ -70,3 +70,20 @@ forge test
 
 - GitHub: [@lksxyz](https://github.com/lksxyz)
 - X: [@lukisanksatriya](https://x.com/lukisanksatriya)
+
+## Roadmap
+
+### WhatsApp booking flow (research)
+
+Customers will be able to book through WhatsApp, not only through the web link. This is currently being researched. Planned scope:
+
+- Customers pick a service and time slot in a WhatsApp chat.
+- The bot sends a payment link to the same deposit flow used on the web, so the USDC deposit still goes through the `BookingEscrow` contract on Arc.
+- Booking status updates (confirmed, cancelled, reschedule) are sent back to the customer over WhatsApp.
+
+Open questions being researched:
+- WhatsApp Business API provider and onboarding requirements.
+- Whether the bot can hold a wallet session or should hand off to the web app for signing.
+- Message template approval rules for booking and reminder messages.
+
+Nothing in this section is implemented yet.
