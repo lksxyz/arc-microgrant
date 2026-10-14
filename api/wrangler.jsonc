@@ -19,7 +19,7 @@
       "name": "api",
       "vars": {
         "PRIVY_APP_ID": "cmrpqsai500mw0cjr10u9tbot",
-        "RPC_URL": "https://rpc.mainnet.arc.io",
+        "RPC_URL": "https://rpc.drpc.mainnet.arc.io",
         "ESCROW_ADDRESS": "0xB03359a5100B1403FaBA7FAcF68b15BCa791de20",
         "ALLOWED_ORIGINS": "https://platform.lukis.workers.dev"
       },

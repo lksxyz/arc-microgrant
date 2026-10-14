@@ -11,7 +11,7 @@ A booking app where customers pay a USDC deposit into an on-chain escrow on **Ar
 | `BookingEscrow` contract | [`0xB03359a5100B1403FaBA7FAcF68b15BCa791de20`](https://explorer.arc.io/address/0xB03359a5100B1403FaBA7FAcF68b15BCa791de20) |
 
 - Chain ID: `5042`
-- RPC: `https://rpc.mainnet.arc.io`
+- RPC: `https://rpc.drpc.mainnet.arc.io`
 - Payment token: USDC ERC-20 interface `0x3600000000000000000000000000000000000000` (6 decimals)
 - Arbiter: `0xf52b1B2114B20f581a24dBC36dE6F0c20255dd33`
 - Contract source is verified on ArcScan (Standard JSON Input).
